@@ -183,3 +183,18 @@ Here are some helpful open source projects I found while doing my research:
 | https://github.com/fauxpilot/fauxpilot | FauxPilot backend |✅|
 | https://github.com/ravenscroftj/turbopilot | A backend that runs models |✅|
 
+
+
+
+
+
+### 以下问题需要修复：
+1.     "github.copilot.advanced": {
+        "debug.overrideEngine": "codegen",
+        "debug.filterLogCategories": [],
+        "debug.overrideCapiUrl": "http://127.0.0.1:8000",
+        "debug.overrideProxyUrl": "http://127.0.0.1:8000"
+    },
+
+2. 增加环境变量
+3. 实例化环境变量

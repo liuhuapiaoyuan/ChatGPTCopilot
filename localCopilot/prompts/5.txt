@@ -1,0 +1,39 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are an AI programming assistant.\nWhen asked for your name, you must respond with \"GitHub Copilot\".\nFollow the user's requirements carefully & to the letter.\nThe user has a javascript file opened in a code editor.\nThe user includes some code snippets from the file.\nEach code block starts with ``` and // FILEPATH.\nAnswer with a single javascript code block.\nIf you modify existing code, you will use the // BEGIN: and // END: markers.\nYour expertise is strictly limited to software development topics.\nFollow Microsoft content policies.\nAvoid content that violates copyrights.\nFor questions not related to software development, simply give a reminder that you are an AI programming assistant.\nKeep your answers short and impersonal."
+        },
+        // prefix
+        {
+            "role": "user",
+            "content": "I have the following code above the selection:\n```javascript\n// FILEPATH: /h:/\u9879\u76ee\u6587\u6863/\u4e2d\u6838\u6df1\u5733\u5bbf\u820d\u7cfb\u7edfBUG/\u4ee3\u7801/zhonghe-app/client/src/componentUI/TableForm/Transfer/operation.js\n// BEGIN: abpxx6d04wxr\n/**\n * @fileoverview This file contains the TransferOperation component, which represents the operation buttons for transferring items between two lists.\n * @module TransferOperation\n * @exports TransferOperation\n */\n\nimport React from 'react';\nimport {Button , Icon} from 'antd';\n// END: abpxx6d04wxr\n```"
+        },
+
+        //suffix
+        {
+            "role": "user",
+            "content": "I have the following code below the selection:\n```javascript\n// FILEPATH: /h:/项目文档/中核深圳宿舍系统BUG/代码/zhonghe-app/client/src/componentUI/TableForm/Transfer/operation.js\n// BEGIN: be15d9bcejpp\n/**\n * TransferOperation 组件.\n * @class\n * @extends React.Component\n * @param {Object} props 
+- 组件的 props 对象.\n * @param {string
+            } [props.className
+            ] - 组件的类名.\n * @param {string
+            } [props.leftArrowText
+            ] - 左箭头按钮的文本.\n * @param {string
+            } [props.rightArrowText
+            ] - 右箭头按钮的文本.\n * @param {Function
+            } [props.moveToLeft
+            ] - 移动项目到左侧列表的事件处理函数.\n * @param {Function
+            } [props.moveToRight
+            ] - 移动项目到右侧列表的事件处理函数.\n * @param {boolean
+            } [props.leftActive
+            ] - 左箭头按钮是否可用.\n * @param {boolean
+            } [props.rightActive
+            ] - 右箭头按钮是否可用.\n */\nexport default class TransferOperation extends React.Component {\n  static defaultProps = {\n    leftArrowText: '',\n    rightArrowText: '',\n    moveToLeft: noop,\n    moveToRight: noop,\n
+                };\n\n  render() {\n    const {\n      moveToLeft,\n      moveToRight,\n      leftArrowText,\n      rightArrowText,\n      leftActive,\n      rightActive,\n      className,\n
+                    } = this.props;\n\n    const moveToLeftButton = (\n      <Button type=\"primary\" size=\"small\" disabled={!leftActive} onClick={moveToLeft}>\n        <span><Icon type=\"left\" />{leftArrowText}</span>\n      </Button>\n    );\n    const moveToRightButton = (\n      <Button type=\"primary\" size=\"small\" disabled={!rightActive} onClick={moveToRight}>\n        <span>{rightArrowText}<Icon type=\"right\" /></span>\n      </Button>\n    );\n    return (\n      <div className={className}>\n        {moveToLeftButton}\n        {moveToRightButton}\n      </div>\n    );\n  }\n}\n// END: be15d9bcejpp\n```"
+                },
+                {
+                    "role": "user",
+                    "content": "帮我写一段快速排序"
+                }
+            ]

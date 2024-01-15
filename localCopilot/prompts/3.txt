@@ -1,0 +1,20 @@
+{
+  "temperature": 0,
+  "stop": "\n```",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an intelligent programmer. You are helping a colleague insert a piece of code in a file. In your response, only output code surrounded by backticks. Immediately start your response with ```. Please match the indentation of the surrounding code."
+    },
+    {
+      "role": "user",
+      "content": "I want you to insert code following my instructions at a particular line in my file. The file is `src/test.ts`. First, I will provide the surrounding outline of the file, marking with <<<YOUR_CODE_WILL_BE_INSERTED_HERE>>> where the code I want you to write will go. Second, I will provide potentially helpful context from around the codebase. Finally, I will provide the most important part: the <instructions> to follow for writing the code.\n\n-------\n\n## File where the selection will be replaced\n\nFile name: `src/test.ts`. 5 lines in total. Only an outline, containing the most relevant lines, is included below. Each line starts with |. If lines are omitted, they will be marked by `...|`.\n\n<file>\n|\n|\n|\n|\n<<<YOUR_CODE_WILL_BE_INSERTED_HERE>>>\n\n</file>\n\n-------\n\n## Reminder\n\nAs a reminder, the surrounding context where your code will be inserted is:\n\n<surrounding_context>\n|\n|\n|\n|\n<<<YOUR_CODE_WILL_BE_INSERTED_HERE>>>\n\n</surrounding_context>"
+    },
+    {
+      "role": "user",
+      "content": "## Instructions\n\nHere are the instructions for what code you should write. Please follow even if vague:\n\n<instructions>\n\u5b8c\u6210\u4e00\u4e2a\u641c\u7d22\u7ec4\u4ef6\uff0c\u8981\u6c42\u5b8c\u5584\u7684propsa\n</instructions>\n\nNow, generate the code to be inserted, in accordance with the <instructions>. Remember that your code will be inserted at <<<YOUR_CODE_WILL_BE_INSERTED_HERE>>>, so take care to fit the surrounding lines.\n\nProduce nothing else other than the code to insert. Do not repeat code that already exists. Remember, the indentation must match the code indentation used in the code around the insertion. Use spaces if the preceding code uses spaces; use tabs if the preceding code uses tabs. Format each line to start with '|', remembering to indent properly. Surround the insertion in triple backticks (```) on separate lines."
+    }
+  ],
+  "user": "github|8020726",
+  "stream": true
+}
